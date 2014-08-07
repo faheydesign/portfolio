@@ -205,7 +205,7 @@ module.exports = function(grunt) {
         }
       }
     },
-    
+
     autoprefixer: {
       options: {
         browsers: ['last 1 version']
@@ -294,22 +294,22 @@ module.exports = function(grunt) {
         }]
       }
     },
-    cssmin: {
-      // This task is pre-configured if you do not wish to use Usemin
-      // blocks for your CSS. By default, the Usemin block from your
-      // `index.html` will take care of minification, e.g.
-      //
-      //     <!-- build:css({.tmp,app}) styles/main.css -->
-      //
-      // dist: {
-      //     files: {
-      //         '/styles/main.css': [
-      //             '.tmp/styles/{,*/}*.css',
-      //             '/styles/{,*/}*.css'
-      //         ]
-      //     }
-      // }
-    },
+    // cssmin: {
+    //   // This task is pre-configured if you do not wish to use Usemin
+    //   // blocks for your CSS. By default, the Usemin block from your
+    //   // `index.html` will take care of minification, e.g.
+    //   //
+    //   //     <!-- build:css({.tmp,app}) styles/main.css -->
+    //   //
+    //   // dist: {
+    //   //     files: {
+    //   //         '/styles/main.css': [
+    //   //             '.tmp/styles/{,*/}*.css',
+    //   //             '/styles/{,*/}*.css'
+    //   //         ]
+    //   //     }
+    //   // }
+    // },
     htmlmin: {
       dist: {
         options: {
@@ -343,7 +343,7 @@ module.exports = function(grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'images/{,*/}*.webp',
-            'styles/fonts/{,*/}*.*' 
+            'styles/fonts/{,*/}*.*'
           ]
         }]
       },
@@ -355,7 +355,7 @@ module.exports = function(grunt) {
         src: '{,*/}*.css'
       }
     },
-    
+
     modernizr: {
       devFile: '<%= yeoman.vendor %>/modernizr/modernizr.js',
       outputFile: '<%= yeoman.dist %>/bower_components/modernizr/modernizr.js',
@@ -363,8 +363,8 @@ module.exports = function(grunt) {
         '<%= yeoman.dist %>/scripts/{,*/}*.js',
         '<%= yeoman.dist %>/styles/{,*/}*.css',
         '!<%= yeoman.dist %>/scripts/vendor/*'
-      ],
-      uglify: true
+      ]//,
+      //uglify: true
     },
     concurrent: {
       server: [
@@ -426,8 +426,8 @@ module.exports = function(grunt) {
     'concurrent:dist',
     'autoprefixer',
     'concat',
-    'cssmin',
-    'uglify',
+    // 'cssmin',
+    // 'uglify',
     'modernizr',
     'copy:dist',
     'rev',
